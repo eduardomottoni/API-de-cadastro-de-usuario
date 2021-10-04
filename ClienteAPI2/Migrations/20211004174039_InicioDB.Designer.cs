@@ -3,14 +3,16 @@ using ClienteAPI2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClienteAPI2.Migrations
 {
     [DbContext(typeof(ClienteDB))]
-    partial class ClienteDBModelSnapshot : ModelSnapshot
+    [Migration("20211004174039_InicioDB")]
+    partial class InicioDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

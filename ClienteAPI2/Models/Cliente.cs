@@ -23,5 +23,6 @@ namespace ClienteAPI2.Models
         public int Genero { get; set; }
         [Column(TypeName = "int")]
         public int Status { get; set; }
+        
     }
 }

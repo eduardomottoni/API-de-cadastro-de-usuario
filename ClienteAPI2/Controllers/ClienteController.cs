@@ -78,7 +78,9 @@ namespace ClienteAPI2.Controllers
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
             _context.Clientes.Add(cliente);
+            cliente.Status = 1;
             await _context.SaveChangesAsync();
+            
 
             return CreatedAtAction("GetCliente", new { id = cliente.IdUsuario }, cliente);
         }
