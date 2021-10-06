@@ -1,1 +1,43 @@
-<p>cliente-formulario works!</p>
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="idUsuario"
+    [value]="servico.dadosFormulario.idUsuario" />
+    <div class="formgroup">
+        <label >Nome do Usuário</label>
+        <input class="form-control form-control-lg" placeholder="Nome Completo"
+        name="nome" #nome="ngModel" [(ngModel)]="servico.dadosFormulario.nome"
+        required [class.invalid]="nome.invalid && nome.touched" maxlength="150" minlength="7">
+    </div>
+    <div class="formgroup">
+        <label >E-Mail</label>
+        <input class="form-control form-control-lg" placeholder="nome@provedor.com" 
+        name="email" #email="ngModel" [(ngModel)]="servico.dadosFormulario.email"
+        required [class.invalid]="email.invalid && email.touched" maxlength="100">
+    </div>
+    <div class="formgroup">
+        <label >Senha</label>
+        <input type="password" class="form-control form-control-lg" placeholder="*********" 
+        name="senha" #senha="ngModel" [(ngModel)]="servico.dadosFormulario.senha"
+        required [class.invalid]="senha.invalid && senha.touched" minlength="8" maxlength="15">
+    </div>
+    <div class="row"> 
+        <div class="formgroup col-md-6">
+            <label >Data de Nascimento</label>
+            <input type="date" class="form-control form-control-lg" placeholder="dd/MM/YY" 
+            name="datanasc" #datanasc="ngModel" [(ngModel)]="servico.dadosFormulario.datanasc"
+            required [class.invalid]="datanasc.invalid && datanasc.touched" minlenth="10" maxlength="10">  
+        </div>
+
+        <div class="formgroup col-md-6">
+            <label >Genero</label>
+            <select class="form-control form-control-lg" placeholder="Masculino/Feminino" 
+            name="genero" #genero="ngModel" [(ngModel)]="servico.dadosFormulario.genero"
+            required [class.invalid]="genero.invalid && genero.touched">
+            <option value="0">Masculino</option>
+            <option value="1">Feminino</option>
+            </select>
+    </div>
+    </div>
+    <div class="form-group row py-3">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">Gravar</button>
+    </div>
+</form>
