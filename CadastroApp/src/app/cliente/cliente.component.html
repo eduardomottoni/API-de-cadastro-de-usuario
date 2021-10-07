@@ -8,7 +8,28 @@
      </div>
      
      <div class="col-md-6">
-         <span>Lista de Clientes</span>
+         <table class="table">
+             <thead class="thead-light">
+                 <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data de nascimento</th>
+                    <th>Gênero</th>
+                    <th></th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let pd of service.list">
+                     <td (click)="popularFormulario(pd)">{{pd.nome}}</td>
+                     <td (click)="popularFormulario(pd)">{{pd.email}}</td>
+                     <td (click)="popularFormulario(pd)">{{pd.datanasc}}</td>
+                     <td (click)="popularFormulario(pd)">{{pd.genero}}</td>
+                     <td>
+                         <i class="far fa-trash-alt fa-kg text-danger" (click)="onDelete(pd.idUsuario)"></i>
+                     </td>
+                 </tr>
+             </tbody>
+         </table>
      </div>
  </div>
  

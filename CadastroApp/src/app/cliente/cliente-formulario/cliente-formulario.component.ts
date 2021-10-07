@@ -18,17 +18,39 @@ export class ClienteFormularioComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(form: NgForm){
+    if(this.servico.dadosFormulario.idUsuario == 0)
+    this.insertRecord(form);
+    else
+    this.updateRecord(form);
+  }
+
+  insertRecord(form:NgForm){
     this.servico.postCliente().subscribe(
       res => {
         this.resetarFormulario(form);
+        this.servico.atualizarLista();
         this.toastr.success('Dados enviados com sucesso', 'Cliente Registrado')
       },
       err => { console.log(err);}
     );
   }
+  
+  updateRecord(form:NgForm){
+    this.servico.putCliente().subscribe(
+      res => {
+        this.resetarFormulario(form);
+        this.servico.atualizarLista();
+        this.toastr.info('Dados atualizados com sucesso', 'Cliente Registrado')
+      },
+      err => { console.log(err);}
+    );
+  }
+
   resetarFormulario(form:NgForm){
     form.form.reset();
     this.servico.dadosFormulario = new Cliente();
   }
+
+  
 
 }
