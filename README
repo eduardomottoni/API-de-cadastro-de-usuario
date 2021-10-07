@@ -1,0 +1,9 @@
+Pacotes ClienteAPI2:
+Entity FrameworkCore:Core; SQL; Tools
+VisualStudio.Web.CodeGeneration: Core; Design
+Swashbuckle
+
+
+ClienteAPP
+Angular;
+Toastr;
