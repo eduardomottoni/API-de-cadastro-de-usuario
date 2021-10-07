@@ -1,5 +1,5 @@
 Pacotes ClienteAPI2:
-Entity FrameworkCore:Core; SQL; Tools
+Entity FrameworkCore:Core; SQL; Tools <br/>
 VisualStudio.Web.CodeGeneration: Core; Design
 Swashbuckle
 
@@ -10,10 +10,6 @@ Toastr;
 
 ![Alt text](https://raw.githubusercontent.com/eduardomottoni/ClienteAPI2/master/Samples/grava%C3%A7%C3%A3o.png)
 Front-End
-
-![Alt text](/Samples/gravação.png)
-
-![Alt text](https://raw.githubusercontent.com/eduardomottoni/ClienteAPI2/master/Samples/grava%C3%A7%C3%A3o.png)
 
 ![alt text](https://github.com/eduardomottoni/ClienteAPI2/blob/master/Samples/Backend.png?raw=true "Backend")
 BackEnd do projeto
