@@ -29,3 +29,6 @@ Toastr;<br/>
 ## BackEnd do projeto
 ![alt text](https://github.com/eduardomottoni/ClienteAPI2/blob/master/Samples/Backend.png?raw=true "Backend")
 
+<br/><br/><br/>
+## Banco de dados
+![alt text](https://github.com/eduardomottoni/ClienteAPI2/blob/master/Samples/bancodedados.png?raw=true "Banco de dados")
